@@ -7,64 +7,49 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="emociones.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
-    <div class="emociones-page">
-        <h1>Seguimiento de Emociones</h1>
+    <div class="content-wrapper">
         <div class="emotion-tracker">
             <div class="emotion-chart">
-                <!-- Aquí irá el gráfico de barras -->
+                <canvas id="emotionChart"></canvas>
             </div>
             <div class="emotion-grid">
-                <div class="emotion" data-emotion="tristeza">
-                    <img src="imagenes/emoticones/triste.png" alt="Tristeza">
-                    <span>Tristeza</span>
-                </div>
-                <div class="emotion" data-emotion="frustracion">
-                    <img src="imagenes/emoticones/frustado.png" alt="Frustración">
-                    <span>Frustración</span>
-                </div>
-                <div class="emotion" data-emotion="relajado">
-                    <img src="imagenes/emoticones/relajado.png" alt="Relajado">
-                    <span>Relajado</span>
-                </div>
-                <div class="emotion" data-emotion="miedo">
-                    <img src="imagenes/emoticones/miedo.png" alt="Miedo">
-                    <span>Miedo</span>
-                </div>
-                <div class="emotion" data-emotion="enojado">
-                    <img src="imagenes/emoticones/enojado.png" alt="Enojado">
-                    <span>Enojado</span>
-                </div>
-                <div class="emotion" data-emotion="ansiedad">
-                    <img src="imagenes/emoticones/ansiedad.png" alt="Ansiedad">
-                    <span>Ansiedad</span>
-                </div>
-                <div class="emotion" data-emotion="agradecido">
-                    <img src="imagenes/emoticones/agradecido.png" alt="Agradecido">
-                    <span>Agradecido</span>
-                </div>
-                <div class="emotion" data-emotion="feliz">
-                    <img src="imagenes/emoticones/feliz.png" alt="Feliz">
-                    <span>Feliz</span>
-                </div>
-                <div class="emotion" data-emotion="enamorado">
-                    <img src="imagenes/emoticones/enamorado.png" alt="Enamorado">
-                    <span>Enamorado</span>
-                </div>
-                <div class="emotion" data-emotion="esperanza">
-                    <img src="imagenes/emoticones/esperanzado.png" alt="Esperanza">
-                    <span>Esperanza</span>
-                </div>
+                <div class="emotion" title="Feliz"><img src="imagenes/emoticones/feliz.png" alt="Feliz"></div>
+                <div class="emotion" title="Triste"><img src="imagenes/emoticones/triste.png" alt="Triste"></div>
+                <div class="emotion" title="Enojado"><img src="imagenes/emoticones/enojado.png" alt="Enojado"></div>
+                <div class="emotion" title="Sorprendido"><img src="imagenes/emoticones/agradecido.png" alt="Sorprendido"></div>
+                <div class="emotion" title="Asustado"><img src="imagenes/emoticones/ansiedad.png" alt="Asustado"></div>
+                <div class="emotion" title="Disgustado"><img src="imagenes/emoticones/frustado.png" alt="Disgustado"></div>
+                <div class="emotion" title="Ansioso"><img src="imagenes/emoticones/enamorado.png" alt="Ansioso"></div>
+                <div class="emotion" title="Calmado"><img src="imagenes/emoticones/esperanzado.png" alt="Calmado"></div>
+                <div class="emotion" title="Emocionado"><img src="imagenes/emoticones/miedo.png" alt="Emocionado"></div>
+                <div class="emotion" title="Cansado"><img src="imagenes/emoticones/relajado.png" alt="Cansado"></div>
+                
             </div>
         </div>
-        <div class="emotion-diary">
-            <div class="calendar">
-                <!-- Aquí irá el calendario interactivo -->
+        
+        <div class="lower-section">
+            <div class="calendar-container">
+                <input type="text" id="date-picker" placeholder="Elige una fecha" readonly>
+                <button id="search-btn" onclick="searchDiary()">Buscar</button>
             </div>
-            <div class="diary-entry">
-                <textarea placeholder="Escribe sobre tus emociones aquí..."></textarea>
-                <button class="save-btn">Guardar</button>
+            <div class="emotion-diary">
+                <div class="diary-entry">
+                    <textarea id="diaryText" placeholder="Escribe tus pensamientos aquí..."></textarea>
+                    <div class="diary-controls">
+                        <div>
+                            <button class="format-btn" onclick="formatText('bold')">B</button>
+                            <button class="format-btn" onclick="formatText('italic')">I</button>
+                            <button class="format-btn" onclick="formatText('underline')">U</button>
+                            <button class="format-btn" onclick="formatText('highlight')">Resaltar</button>
+                        </div>
+                        <button class="save-btn" onclick="saveDiary()">Guardar</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
