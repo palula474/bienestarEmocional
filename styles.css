@@ -212,8 +212,8 @@ main {
 .card {
     padding: 10px;
     border-radius: 10px;
-    width: auto;
-    height: auto;
+    width: 3em;
+    height: 3em;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -380,4 +380,18 @@ footer p {
         width: 180px;
         font-size: 11px;
     }
+}
+
+.emotion {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.emotion img {
+    width: 80px; /* Ajusta este valor según el tamaño que desees */
+    height: auto;
+}
+
+.emotion:hover {
+    transform: scale(1.1);
 }

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explora y Crece - Bienestar Emocional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="explora-y-crece.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="home-button">Inicio</a>
+            <a href="#retos">Retos</a>
+            <a href="#ayuda">Ayuda</a>
+        </nav>
+    </header>
+    
+    <main class="explora-crece-page">
+        <h1 class="main-title">Bienestar Mental Diario: Música, Retos y Apoyo Emocional</h1>
+        
+        <section id="contenido" class="content-section">
+            <h2>Contenido</h2>
+            <div class="content-wrapper">
+                <div class="video-player">
+                    <h3>Videos Motivacionales</h3>
+                    <div class="video-grid">
+                        <div class="video-item">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/z78mTWDlPec" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>El poder de creer en ti mismo</p>
+                        </div>
+                        <div class="video-item">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qxHKVaQOFrQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>Nunca te rindas</p>
+                        </div>
+                        <div class="video-item">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/A74eNsWbjNY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>Tu vida cambia hoy</p>
+                        </div>
+                        <div class="video-item">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/TKuEvKpPHIA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>Actitud positiva</p>
+                        </div>
+                        <div class="video-item">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/7jozYXB9voo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <p>No te rindas, persigue tus sueños</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="podcast-player">
+                    <h3>Podcasts de Bienestar</h3>
+                    <div class="podcast-container">
+                        <div class="podcast-item">
+                            <h4>Podcast 1</h4>
+                            <iframe src="https://open.spotify.com/embed/show/2xV7Vx7NQgAC8vMt2vZNnE" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            <p class="podcast-description">Este podcast describe cómo la mente de una persona gestiona su energía mental a lo largo del día.</p>
+                        </div>
+                        <div class="podcast-item">
+                            <h4>Podcast 2</h4>
+                            <iframe src="https://open.spotify.com/embed/track/1Zwsu26SaJ9L7je5HBSGvt" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            <p class="podcast-description">Gestionar malos pensamientos es un proceso que puede requerir tiempo y práctica, pero hay varias estrategias efectivas que pueden ayudar.</p>
+                        </div>
+                        <div class="podcast-item">
+                            <h4>Podcast 3</h4>
+                            <iframe src="https://open.spotify.com/embed/track/5tHTZii3fviTQL32871ZuV" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                            <p class="podcast-description">Es un podcast diseñado para guiar a los oyentes hacia un sueño reparador y de calidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-player">
+                    <h3>Música para Relajarte</h3>
+                    <div class="spotify-container">
+                        <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcjpPPxCzYRE" 
+                                width="100%" 
+                                height="380" 
+                                frameborder="0" 
+                                allowtransparency="true" 
+                                allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="retos" class="challenges-section">
+            <h2>Desafía tu mente: ¡Crea hábitos positivos en 21 días!</h2>
+            <div class="challenge-grid">
+                <div class="challenge-card">
+                    <h3>Reto 1: Diario de gratitud</h3>
+                    <p>Durante 7 días, escribe 3 cosas por las que te sientas agradecido/a cada día. Esto ayuda a enfocar la mente en lo positivo.</p>
+                    <button class="complete-btn" onclick="markComplete(this)">Marcar como completado</button>
+                </div>
+                <div class="challenge-card">
+                    <h3>Reto 2: Respiración consciente</h3>
+                    <p>Dedica 5 minutos al día a practicar respiración profunda y consciente. Siéntate en un lugar tranquilo, cierra los ojos y respira lentamente.</p>
+                    <button class="complete-btn" onclick="markComplete(this)">Marcar como completado</button>
+                </div>
+                <div class="challenge-card">
+                    <h3>Reto 3: Caminata al aire libre</h3>
+                    <p>Sal a caminar 15-20 minutos al día en un entorno natural. Presta atención a tu entorno, sonidos y olores. Esto reduce el estrés y aumenta la sensación de bienestar.</p>
+                    <button class="complete-btn" onclick="markComplete(this)">Marcar como completado</button>
+                </div>
+                <div class="challenge-card">
+                    <h3>Reto 4: Practicar un hobby</h3>
+                    <p>Dedica al menos 30 minutos al día a un hobby que te haga sentir bien, ya sea leer, pintar, cocinar o tocar un instrumento.</p>
+                    <button class="complete-btn" onclick="markComplete(this)">Marcar como completado</button>
+                </div>
+                <div class="challenge-card">
+                    <h3>Reto 5: Rutina de autoafirmaciones</h3>
+                    <p>Comienza cada día con 3 afirmaciones positivas. Repite frases como "Soy capaz", "Merezco ser feliz", "Estoy en control de mi vida".</p>
+                    <button class="complete-btn" onclick="markComplete(this)">Marcar como completado</button>
+                </div>
+                <div class="challenge-card">
+                    <h3>Reto 6: Desafío de amabilidad</h3>
+                    <p>Realiza un acto de bondad diario, ya sea ofrecer ayuda, dar un cumplido sincero o llamar a alguien que lo necesite. Ayudar a otros te ayudará a ti tambin.</p>
+                    <button class="complete-btn" onclick="markComplete(this)">Marcar como completado</button>
+                </div>
+                <div class="challenge-card">
+                    <h3>Reto 7: Diario de gratitud nocturno</h3>
+                    <p>Llevar un diario de gratitud antes de dormir, puedes hacerlo con tu diario digital.</p>
+                    <button class="complete-btn" onclick="markComplete(this)">Marcar como completado</button>
+                </div>
+                <div class="challenge-card">
+                    <h3>Reto 8: Visualización Positiva</h3>
+                    <p>Durante 5 minutos al día, practica imaginar un escenario futuro que te llene de alegría y satisfacción. Cierra los ojos y visualiza cómo te sentirías logrando tus metas o disfrutando de un momento feliz. Este ejercicio puede ayudarte a cultivar esperanza y optimismo, lo que tiene un impacto positivo en el estado emocional.</p>
+                    <button class="complete-btn" onclick="markComplete(this)">Marcar como completado</button>
+                </div>
+                <div class="challenge-card">
+                    <h3>Reto 9: Desahogo Creativo</h3>
+                    <p>Dedica 10 minutos al día a expresar tus emociones de manera creativa. Puede ser a través de escritura, dibujo, pintura o música. No te preocupes por el resultado final, lo importante es usar el arte como una vía para liberar tensiones y conectar con tus sentimientos.</p>
+                    <button class="complete-btn" onclick="markComplete(this)">Marcar como completado</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="ayuda" class="help-section">
+            <h2>Ayuda de Emergencia</h2>
+            <p>Si necesitas apoyo inmediato, no dudes en contactar con estas líneas de ayuda:</p>
+            <div class="emergency-buttons">
+                <a href="tel:717003717" class="emergency-btn">
+                    <strong>Teléfono de la Esperanza</strong><br>
+                    <span class="emergency-number">717 003 717</span>
+                </a>
+                <a href="tel:900107917" class="emergency-btn">
+                    <strong>Cruz Roja: Servicio de Apoyo Psicológico</strong><br>
+                    <span class="emergency-number">900 107 917</span>
+                </a>
+                <a href="tel:116123" class="emergency-btn">
+                    <strong>Samaritans (Línea de prevención de suicidio)</strong><br>
+                    <span class="emergency-number">116 123</span>
+                </a>
+            </div>
+            <div class="additional-resources">
+                <h3>Recursos Adicionales</h3>
+                <ul>
+                    <li><a href="https://www.mentesabiertas.org/" target="_blank">Mentes Abiertas - Recursos de Salud Mental</a></li>
+                    <li><a href="https://www.headspace.com/es" target="_blank">Headspace - App de Mindfulness y Meditación</a></li>
+                    <li><a href="https://www.psicologia-online.com/" target="_blank">Psicología Online - Artículos y Recursos</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#" id="terms">Términos y Condiciones</a>
+            <a href="#" id="privacy">Política de Privacidad</a>
+            <a href="#" id="contact">Contacto</a>
+        </div>
+        <p>&copy; 2024 App de Bienestar Emocional. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Cuadros emergentes -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-text"></p>
+            <button id="modal-accept">Aceptar</button>
+        </div>
+    </div>
+
+    <script src="explora-y-crece.js"></script>
+</body>
+</html>

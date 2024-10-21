@@ -1,15 +1,69 @@
-.emociones-body {
-    background: linear-gradient(to bottom, #f0f0f0, #808080);
+/* Añade esto al principio del archivo */
+.top-menu {
+    background-color: #D3D3D3; /* Cambiado de #333333 (gris oscuro) a #D3D3D3 (gris claro) */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.menu-btn {
+    background-color: white;
+    color: #808080;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn img,
+.menu-btn span {
+    width: 24px;
+    height: 24px;
+    filter: invert(50%);
+    transition: filter 0.3s ease;
+}
+
+.menu-btn:hover img,
+.menu-btn:hover span {
+    filter: invert(0%);
+}
+
+/* Ajusta el contenido principal para que no se superponga con la barra de menú */
+.content-wrapper {
+    padding-top: 60px; /* Ajusta este valor según la altura de tu barra de menú */
+}
+
+body {
+    background: linear-gradient(to bottom, #f0f0f0, #c0c0c0);
     min-height: 100vh;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 .emociones-page {
     padding: 20px;
-    max-width: 1200px;
+    width: 90%;
+    max-width: 1600px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -35,30 +89,155 @@ header {
 .content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    height: 100vh;
+    width: 100%;
 }
 
 .emotion-tracker {
     display: flex;
-    gap: 20px;
+    height: 40vh;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .emotion-chart {
-    width: 30%;
-    background-color: rgba(255, 255, 255, 0.1);
+    width: 40%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 20px;
+    box-sizing: border-box;
+    margin-left: 15px; /* Añadimos este margen izquierdo */
+}
+
+#emotionChart {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .emotion-grid {
-    width: 70%;
+    width: 60%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 15px;
+    gap: 10px;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.lower-section {
+    display: flex;
+    height: 60vh;
+    gap: 20px;
+    padding: 0 20px 20px;
+}
+
+.calendar-container {
+    width: 30%;
+    background-color: #E6F3FF;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px; /* Aseguramos que el calendario también tenga este margen */
+}
+
+#date-picker {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #A8D1FF;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+#search-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #45a049;
+}
+
+.emotion-diary {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFE4E1;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.diary-entry {
+    width: 100%;
+    height: 100%;
+}
+
+.diary-entry textarea {
+    width: 100%;
+    height: calc(100% - 50px);
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFF0F5; /* Cambiado a un tono rosa más claro (Lavender Blush) */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    resize: none;
+}
+
+.diary-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.format-btn, .save-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.format-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    margin-right: 5px;
+}
+
+.format-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.save-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
 }
 
 .emotion {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #f8f8f8;
     color: #333;
     border-radius: 10px;
     padding: 15px;
@@ -72,57 +251,20 @@ header {
     justify-content: center;
 }
 
+.emotion:nth-child(1) { background-color: #ffebee; } /* Rojo muy claro */
+.emotion:nth-child(2) { background-color: #e3f2fd; } /* Azul muy claro */
+.emotion:nth-child(3) { background-color: #fff8e1; } /* Amarillo muy claro */
+.emotion:nth-child(4) { background-color: #e8f5e9; } /* Verde muy claro */
+.emotion:nth-child(5) { background-color: #f3e5f5; } /* Púrpura muy claro */
+.emotion:nth-child(6) { background-color: #fce4ec; } /* Rosa muy claro */
+.emotion:nth-child(7) { background-color: #e0f2f1; } /* Turquesa muy claro */
+.emotion:nth-child(8) { background-color: #fff3e0; } /* Naranja muy claro */
+.emotion:nth-child(9) { background-color: #f1f8e9; } /* Verde lima muy claro */
+.emotion:nth-child(10) { background-color: #e8eaf6; } /* Índigo muy claro */
+
 .emotion:hover {
     transform: scale(1.05);
-    background-color: rgba(255, 255, 255, 1);
-}
-
-.emotion-diary {
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.calendar {
-    width: 30%;
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    margin-right: 20px;
-}
-
-.diary-entry {
-    width: 70%;
-}
-
-.diary-entry textarea {
-    width: 100%;
-    height: 200px;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    background-color: #fff9e6;
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    resize: vertical;
-}
-
-.save-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.save-btn:hover {
-    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .emotion img {
@@ -137,10 +279,224 @@ header {
 }
 
 footer {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--color-pastel-blue);
     color: #333;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 3px solid #4A4A4A; /* Añadimos un borde superior gris oscuro */
 }
 
-footer p {
+footer a {
     color: #333;
+    text-decoration: none;
+    margin: 0 10px;
 }
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-accept {
+    background-color: var(--color-pastel-green);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#modal-accept:hover {
+    background-color: #45a049;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 1200px) {
+    .emociones-page {
+        width: 95%;
+    }
+
+    .emotion-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .emotion-tracker {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .emotion-chart, .emotion-grid {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .emotion-diary {
+        height: auto;
+    }
+
+    .calendar, .diary-entry {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .emotion-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .emotion {
+        padding: 8px 6px;
+        font-size: 14px;
+    }
+
+    .emotion img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .emotion-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Ajustes generales para flexibilidad */
+.emotion-tracker, .emotion-diary {
+    width: 100%;
+}
+
+.emotion img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    .emotion-tracker {
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .emotion-chart, .emotion-grid {
+        width: 100%;
+        height: 25vh;
+    }
+
+    .lower-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .calendar-container, .emotion-diary {
+        width: 100%;
+        height: auto;
+    }
+
+    .calendar-container {
+        margin-bottom: 20px;
+    }
+
+    .emotion-diary {
+        min-height: 40vh;
+    }
+
+    .diary-entry textarea {
+        height: 200px;
+    }
+
+    .calendar-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #date-picker, #search-btn {
+        width: 48%;
+        margin-bottom: 0;
+    }
+}
+
+/* Modificar la barra de menú */
+.top-menu {
+    background-color: #E0E0E0; /* Gris claro */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.menu-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.menu-btn {
+    background-color: #AEC6CF; /* Cambiado de white a azul claro */
+    color: #333; /* Cambiado a un color más oscuro para mejor contraste */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn:hover {
+    background-color: #8EB3C7; /* Un tono más oscuro de azul para el efecto hover */
+}
+
+/* ... (resto del código sin cambios) ... */
+
