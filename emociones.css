@@ -1,0 +1,146 @@
+.emociones-body {
+    background: linear-gradient(to bottom, #f0f0f0, #808080);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.emociones-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    padding: 20px;
+    text-align: left;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #45a049;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.emotion-tracker {
+    display: flex;
+    gap: 20px;
+}
+
+.emotion-chart {
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.emotion-grid {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.emotion {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.emotion:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.emotion-diary {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.calendar {
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.diary-entry {
+    width: 70%;
+}
+
+.diary-entry textarea {
+    width: 100%;
+    height: 200px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff9e6;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    resize: vertical;
+}
+
+.save-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #45a049;
+}
+
+.emotion img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.emotion span {
+    display: block;
+    font-weight: bold;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+footer p {
+    color: #333;
+}
